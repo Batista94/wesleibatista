@@ -8,16 +8,16 @@ Currently, at **Compass.UOL**, I develop high-impact AI solutions for complex do
 
 ### 🏗️ Featured Ventures & Projects
 
-* **PactaFlow | Automated SLA Compliance & Financial Protection Platform**
+* **VeraProv | Automated SLA Compliance & Financial Protection Platform**
     * *Proprietary System Architecture (B2B Logistics & Fintech).*
-    * Uma plataforma de inteligência operacional orientada a eventos que utiliza um motor de avaliação determinística e um ledger imutável para transformar telemetria bruta em conformidade contratual auditável. 
+    * An event-driven operational intelligence platform that uses a deterministic evaluation engine and an immutable ledger to transform raw telemetry into auditable contractual compliance.
     * **Key Tech:** Flutter, Riverpod, Supabase (RLS & Realtime), PostgreSQL.
 
 * **[Agribusiness Intelligence] Ethanol Sales Forecasting**
     * *MBA Thesis @ ICMC-USP.* Uma análise comparativa profunda entre modelos clássicos (ARIMA/SARIMA) e Machine Learning (XGBoost/Prophet) para o setor sucroenergético, com foco em séries temporais complexas e validação robusta.
 
 * **[NLP & Transformers] Disaster Sentiment Analysis**
-    * Pesquisa e fine-tuning de modelos **DistilBERT** para classificação de crises, explorando as bases da arquitetura Transformer que sustenta as LLMs atuais.
+    * Research and fine-tuning of DistilBERT models for crisis classification, exploring the foundations of the Transformer architecture that underpins current LLMs
 
 ---
 
