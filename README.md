@@ -20,14 +20,16 @@ Data Scientist and ML Engineer at **AI/R Compass UOL**. Currently consulting for
 * **Industrial Operations:** Data integration for predictive logistics, improving asset availability and unloading efficiency.
 
 ### 🏗️ Engineering & Architecture
-I prioritize deterministic systems and forensic-level data integrity:
-* **Data Invariants:** Strict consistency rules (UTC, financial precision) enforced at the database level.
-* **Security:** Native Row-Level Security (RLS) and audit trails for high-compliance environments.
-* **MLOps:** Automated pre-commit scanners to maintain architectural standards and CI/CD for model deployment.
+I architect high-integrity distributed systems and deterministic data pipelines:
+* **Forensic Data Invariants:** Implementation of strict database-level consistency models (UTC mandatory pipelines, symmetric Basis Points rounding, and `BIGINT` monetary representation to eliminate floating-point drift).
+* **Decoupled Event Sourcing:** Designing infrastructure-agnostic domain cores (`lib/domain/`) with deterministic event replay, periodic state snapshots, and time-travel auditing to eliminate mutability disputes.
+* **Zero-Trust Telemetry Ingestion:** Cryptographic edge sealing (SHA-256 evidence hashing + tenant-isolated HMAC signatures) and idempotency layers to securely process telemetry from untrusted edge devices.
+* **Solo-Enterprise Rigor:** Maintaining high-complexity systems autonomously via automated security scanners, dockerized visual regressions (Hermetic Goldens), and automated pgTap database tests.
 
 ### 💼 Proprietary Projects
-* **VeraProv:** A logistics/fintech engine built on an immutable ledger and deterministic evaluation for automated SLA compliance.
-    * **Stack:** Flutter (Riverpod), Supabase (PostgreSQL/RLS), Docker.
+* **VeraProb:** An Agnostic Forensic Engine engineered for SLA/Financial Protection and B2B contract governance of high-frequency operational telemetry. It ingests untrusted telemetry streams at scale, ranks evidence, and issues immutable, cryptographically sealed verdicts auditable in <10 seconds.
+    * **Architecture:** DDD with strict C4 boundaries, Event Sourcing core for deterministic historical replay, and database-level append-only restrictions (no updates/deletes).
+    * **Stack:** Flutter (Wasm/CanvasKit) + Riverpod 3, Supabase (PostgreSQL + Native RLS), Deno Edge Functions, Drift (offline fact-queue storage), MapTiler.
 
 ---
 
@@ -47,22 +49,24 @@ Data Scientist e Machine Learning Engineer na **AI/R Compass UOL**. Atuando como
 
 ### 🏗️ Engenharia & Arquitetura
 Priorizo sistemas determinísticos e integridade de dados em nível forense:
-* **Invariantes de Dados:** Regras de consistência rígidas (UTC, precisão financeira) aplicadas diretamente no banco de dados.
-* **Segurança:** Row-Level Security (RLS) nativo e trilhas de auditoria para ambientes de alta conformidade.
-* **MLOps:** Scanners automatizados em pre-commit para garantir padrões arquiteturais e CI/CD para deploy de modelos.
+* **Invariantes Forenses de Dados:** Implementação de modelos rígidos de consistência no banco de dados (pipelines em UTC mandatório, arredondamento simétrico de Basis Points e representação monetária em `BIGINT` para eliminar desvios de ponto flutuante).
+* **Event Sourcing Desacoplado:** Design de núcleos de domínio agnósticos a infraestrutura (`lib/domain/`) com replay determinístico de eventos, snapshots de estado periódicos e auditoria "time-travel" para eliminar disputas de mutabilidade de dados.
+* **Ingestão Telemetria Zero-Trust:** Selagem criptográfica na borda (hashing de evidência SHA-256 + assinaturas HMAC isoladas por tenant) e camadas de idempotência para processar com segurança telemetria de dispositivos periféricos não confiáveis.
+* **Rigor Solo-Enterprise:** Manutenção autônoma de sistemas de alta complexidade via scanners de segurança integrados, regressões visuais dockerizadas (Hermetic Goldens) e testes automatizados de banco de dados via pgTap.
 
 ### 💼 Projetos Proprietários
-* **VeraProv:** Motor de logística/fintech fundamentado em ledger imutável e avaliação determinística para conformidade automática de SLAs.
-    * **Stack:** Flutter (Riverpod), Supabase (PostgreSQL/RLS), Docker.
+* **VeraProb:** Motor forense agnóstico (Agnostic Forensic Engine) projetado para governança de contratos B2B, proteção financeira e validação de SLAs através de telemetria operacional de alta frequência. Processa fluxos de dados brutos não confiáveis (untrusted) e emite vereditos imutáveis e auditáveis em menos de 10 segundos.
+    * **Arquitetura:** DDD com limites rígidos de C4, motor em Event Sourcing para replay determinístico da linha do tempo e restrição de escrita append-only diretamente no banco de dados.
+    * **Stack:** Flutter (Wasm/CanvasKit) + Riverpod 3, Supabase (PostgreSQL + RLS nativo), Deno Edge Functions, Drift (fila de fatos local via SQLite), MapTiler.
 
 ---
 
 </div>
 
 ### 🛠️ Tech Stack
-* **Machine Learning:** Python (Scikit-Learn, PyTorch), LLMs, LangChain, Transformers.
-* **Data & Cloud:** Spark, SQL, Databricks, AWS, Azure, Supabase.
-* **Architecture:** PostgreSQL, Docker, Flutter (Riverpod), Wasm-ready APIs.
+* **Machine Learning & Analytics:** Python (Scikit-Learn, PyTorch), LLMs, LangChain, Transformers, Databricks.
+* **Data & Cloud Infrastructure:** PostgreSQL (RLS, pgTAP), Supabase, Drift (SQLite), Spark, AWS, Azure.
+* **Architecture & Patterns:** Clean Architecture (C4 Boundaries), Event Sourcing, Domain-Driven Design (DDD), WebAssembly (Wasm-ready APIs).
 
 ### 🎓 Education & Certifications
 * **MBA in AI & Big Data** – USP/ICMC (2024).
