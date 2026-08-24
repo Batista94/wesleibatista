@@ -31,7 +31,7 @@ I architect high-integrity distributed systems and deterministic data pipelines:
     * **Architecture:** DDD with strict C4 boundaries, Event Sourcing core for deterministic historical replay, and database-level append-only restrictions (no updates/deletes).
     * **Stack:** Flutter (Wasm/CanvasKit) + Riverpod 3, Supabase (PostgreSQL + Native RLS), Deno Edge Functions, Drift (offline fact-queue storage), MapTiler.
 
-* **Sovereign Financial Ledger Engine:** A zero-third-party, self-sovereign financial control engine designed under strict privacy-first principles (eliminating bank scrapers and telemetry monetization). Architected for deterministic accounting integrity, strict multi-tenant isolation, and adversarial resilience.
+* **Sovereign Financial Ledger Engine:** A zero-third-party, self-sovereign financial control engine designed under privacy-first principles (eliminating bank scrapers and telemetry monetization). Architected for deterministic accounting integrity, strict multi-tenant isolation, and adversarial resilience.
     * **Architecture & Security:**
       * **Application-Level Encryption (ALE):** AES-256-GCM envelope encryption with per-user DEKs; sensitive financial payloads remain encrypted at rest (`*_enc`) and are never exposed to browser memory or server logs.
       * **Multi-Tenant Hardening:** 100% database tables guarded by PostgreSQL Row-Level Security (`ENABLE + FORCE RLS`) with cross-tenant IDOR neutralization (fail-closed 404 responses).
@@ -68,13 +68,13 @@ Priorizo sistemas determinísticos e integridade de dados em nível forense:
     * **Arquitetura:** DDD com limites rígidos de C4, motor em Event Sourcing para replay determinístico da linha do tempo e restrição de escrita append-only diretamente no banco de dados.
     * **Stack:** Flutter (Wasm/CanvasKit) + Riverpod 3, Supabase (PostgreSQL + RLS nativo), Deno Edge Functions, Drift (fila de fatos local via SQLite), MapTiler.
 
-* **Sovereign Financial Ledger Engine:** Motor de controle e conciliação financeira soberana projetado sob o paradigma *privacy-first* (sem dependência de Open Finance, scrapers ou monetização de telemetria bancária). Focado em determinismo contábil, isolamento criptográfico e garantias estritas de concorrência.
+* **Sovereign Financial Ledger Engine:** Motor de controle e conciliação financeira projetado sob o paradigma *privacy-first* (sem dependência de Open Finance, scrapers ou monetização de telemetria bancária). Focado em determinismo contábil, isolamento criptográfico e garantias estritas de concorrência.
     * **Arquitetura & Segurança:**
       * **Criptografia em Nível de Aplicação (ALE):** Envelope encryption com AES-256-GCM e DEKs exclusivas por usuário; dados sensíveis residem criptografados em repouso (`*_enc`) e nunca são descriptografados no cliente.
       * **Isolamento Multi-Tenant Estrito:** 100% das tabelas blindadas com PostgreSQL Row-Level Security (`ENABLE + FORCE RLS`), neutralizando IDORs na camada de banco de dados.
       * **Concorrência com Travas Consultivas Anti-Deadlock:** Gestão de transações concorrentes via Advisory Locks de 64-bits (`AccountLockKey`) adquiridos em ordem estritamente crescente para eliminar matematicamente qualquer risco de *deadlock*.
       * **Guarda Geracional de Época:** Controle de concorrência com barreiras geracionais (`financial_data_epoch`) para impedir a ressuscitação acidental de dados por requisições em voo durante resets financeiros destrutivos.
-      * **Determinismo Monetário Puro:** Eliminação absoluta de ponto flutuante (`int64` centavos em Go / `BIGINT` em SQL), idempotência transacional atômica obrigatória e checagem de limites de overflow.
+      * **Determinismo Monetário Puro:** Eliminação de ponto flutuante (`int64` centavos em Go / `BIGINT` em SQL), idempotência transacional obrigatória e checagem de limites de overflow.
     * **Stack:** Go (`net/http`, `pgx`), PostgreSQL 16 (RLS + Advisory Locks), Vite + React + TypeScript, Tailwind CSS, OpenAPI 3.0.
 
 ---
